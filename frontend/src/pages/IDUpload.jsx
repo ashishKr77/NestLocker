@@ -24,7 +24,7 @@ function IDUpload() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/uploads/id",
+        "https://nestlocker.onrender.com/api/uploads/id",
         formData,
         {
           headers: {

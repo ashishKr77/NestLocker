@@ -37,7 +37,7 @@ function Booking() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/bookings",
+        "https://nestlocker.onrender.com/api/bookings",
         {
           lockerId: locker._id,
           startTime,

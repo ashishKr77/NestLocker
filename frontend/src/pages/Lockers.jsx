@@ -12,7 +12,7 @@ function Lockers() {
     const fetchLockers = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/lockers"
+          "https://nestlocker.onrender.com/api/lockers"
         );
 
         console.log("Lockers:", response.data);

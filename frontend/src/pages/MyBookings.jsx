@@ -11,7 +11,7 @@ function MyBookings() {
     try {
       // Create Razorpay order
       const response = await axios.post(
-        "http://localhost:5000/api/payments/create-order",
+        "https://nestlocker.onrender.com/api/payments/create-order",
         {
           bookingId: bookingId,
         },
@@ -40,7 +40,7 @@ function MyBookings() {
 
           try {
             const verifyResponse = await axios.post(
-              "http://localhost:5000/api/payments/verify-payment",
+              "https://nestlocker.onrender.com/api/payments/verify-payment",
               {
                 bookingId: bookingId,
                 razorpay_order_id:
@@ -112,7 +112,7 @@ function MyBookings() {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/bookings/cancel/${bookingId}`,
+        `https://nestlocker.onrender.com/api/bookings/cancel/${bookingId}`,
         {},
         {
           headers: {
@@ -151,7 +151,7 @@ function MyBookings() {
 
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/bookings/my",
+          "https://nestlocker.onrender.com/api/bookings/my",
           {
             headers: {
               Authorization: `Bearer ${token}`,
